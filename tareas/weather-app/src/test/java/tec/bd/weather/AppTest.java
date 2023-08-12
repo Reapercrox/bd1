@@ -1,10 +1,7 @@
-package tec.bd;
+package tec.bd.weather;
 
-import org.testng.annotations.Test;
-
-
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.assertj.core.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 /**
  * Unit test for simple App.
  */
@@ -16,6 +13,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        assertThat(true).isTrue();
     }
 }

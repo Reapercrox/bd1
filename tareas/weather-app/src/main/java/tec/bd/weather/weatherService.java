@@ -2,13 +2,10 @@ package tec.bd.weather;
 
 public interface weatherService {
 
-    static float getTemperature(String city) {
-        return 0;
-    }
 
+     float getCityTemperature(String city);
 
-    default float getTemperature() {
-        return getTemperature(null);
-    }
+     float getZipCodeTemperature(String zipCode);
+
 
 }

@@ -9,8 +9,8 @@ public class weatherServiceImplTest {
     public void givenCity_validCity_returnTemperature(){
         var weatherService = new weatherServiceImpl();
 
-        var actual = weatherService.getTemperature("Alajuela");
+        var actual = weatherService.getCityTemperature("Cartago");
 
-        assertThat(actual).isEqualTo(22.5);
+        assertThat(actual).isEqualTo(19.0f);
     }
 }
