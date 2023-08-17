@@ -1,4 +1,4 @@
-package tec.bd.weather;
+package tec.bd.weather.service;
 
 import java.util.HashMap;
 import java.util.Map;

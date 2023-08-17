@@ -1,8 +1,7 @@
 package tec.bd.weather;
 
-import tec.bd.weather.*;
-
 import picocli.CommandLine;
+import tec.bd.weather.cli.MainCommand;
 
 public class App 
 {

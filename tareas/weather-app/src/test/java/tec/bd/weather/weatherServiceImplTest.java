@@ -1,6 +1,8 @@
 package tec.bd.weather;
 
 import org.junit.jupiter.api.Test;
+import tec.bd.weather.service.weatherServiceImpl;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class weatherServiceImplTest {
