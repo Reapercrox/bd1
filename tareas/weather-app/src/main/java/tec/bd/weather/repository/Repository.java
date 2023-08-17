@@ -1,22 +1,28 @@
 package tec.bd.weather.repository;
 
-import java.io.Serializable;
-import java.util.List;
+import tec.bd.weather.entity.Weather;
 
-public interface Repository <T, ID extends Serializable> {
+import java.util.List;
+import java.util.Optional;
+
+public interface Repository <T, ID> {
 
     /**
      * Find name by id
      * @param id
      * @return
      */
-    T findByID(ID id);
+    Optional<Weather> findByID(ID id);
 
-    List<T> findAll();
+    List<Weather> findAll();
 
     void save(T t);
+
+    void save(Weather weather);
 
     void delete(ID id);
 
     T update(T source);
+
+    Optional<Weather> update(Optional<Weather> source);
 }
