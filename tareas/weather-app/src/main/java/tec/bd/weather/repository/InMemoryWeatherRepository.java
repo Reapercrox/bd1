@@ -10,10 +10,10 @@ public class InMemoryWeatherRepository implements Repository<Weather, Integer> {
 
     public InMemoryWeatherRepository(){
         this.inMemoryWeatherData = new HashSet<Weather>();
-        this.inMemoryWeatherData.add(new Weather(1,"Alajuela","10101",23.0f));
-        this.inMemoryWeatherData.add(new Weather(2,"Cartago","20201",24.0f));
-        this.inMemoryWeatherData.add(new Weather(3,"San Jose","30301",25.0f));
-        this.inMemoryWeatherData.add(new Weather(4,"Limon","40401",25.0f));
+        this.inMemoryWeatherData.add(new Weather(1, "Costa Rica", "Alajuela","10101",23.0f));
+        this.inMemoryWeatherData.add(new Weather(2, "Costa Rica","Cartago","20201",24.0f));
+        this.inMemoryWeatherData.add(new Weather(3, "Costa Rica","San Jose","30301",25.0f));
+        this.inMemoryWeatherData.add(new Weather(4, "Costa Rica","Limon","40401",25.0f));
     }
     @Override
     public Optional<Weather> findByID(Integer id) {
@@ -39,13 +39,13 @@ public class InMemoryWeatherRepository implements Repository<Weather, Integer> {
 
     @Override
     public Weather update(Weather source) {
-        
+
         var current = this.findByID(source.getId()).get();
         current.setCityName(source.getCityName());
         current.setZipCode(source.getZipCode());
         current.setTemperature(source.getTemperature());
-
         return current;
     }
+
 
 }

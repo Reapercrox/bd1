@@ -7,6 +7,8 @@ public class Weather {
     private String cityName;
     private String zipCode;
 
+    private String countryName;
+
     public String getZipCode() {
         return zipCode;
     }
@@ -39,12 +41,29 @@ public class Weather {
         this.id = id;
     }
 
-    public Weather(){
-
+    public String getCountryName() {
+        return countryName;
     }
 
-    public Weather(Integer id, String cityName, String zipCode, float temperature){
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public static void validate(Weather newWeather){
+        if(newWeather == null){
+            throw new RuntimeException("No weather forecast provided");
+        }
+        if(newWeather.getId() == null){
+            throw new RuntimeException("No weather forecast ID provided");
+        }
+        if(newWeather.getId() > 0){
+            throw new RuntimeException("Weather forecast ID invalid");
+        }
+    }
+
+    public Weather(Integer id, String countryName, String cityName, String zipCode, float temperature){
         this.id = id;
+        this.countryName = countryName;
         this.cityName = cityName;
         this.zipCode = zipCode;
         this.temperature = temperature;

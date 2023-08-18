@@ -18,11 +18,8 @@ public interface Repository <T, ID> {
 
     void save(T t);
 
-    void save(Weather weather);
-
     void delete(ID id);
 
     T update(T source);
 
-    Optional<Weather> update(Optional<Weather> source);
 }
