@@ -1,6 +1,6 @@
 package tec.bd.weather.repository;
 
-import tec.bd.weather.entity.Weather;
+import tec.bd.weather.entity.Forecast;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,9 +12,9 @@ public interface Repository <T, ID> {
      * @param id
      * @return
      */
-    Optional<Weather> findByID(ID id);
+    Optional<Forecast> findByID(ID id);
 
-    List<Weather> findAll();
+    List<Forecast> findAll();
 
     void save(T t);
 

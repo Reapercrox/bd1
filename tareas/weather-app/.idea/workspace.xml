@@ -8,23 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="524f4ff7-d447-4d78-a522-027373747cb5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryForecastRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByCityCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByZipCodeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByZipCodeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryWeatherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryWeatherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByCityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/ForecastByCityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/WeatherByZipCodeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/ForecastByZipCodeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Forecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryWeatherRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/weatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/weatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tec/bd/weather/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/MainCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/WeatherByCityCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/WeatherByZipCodeCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/weatherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/weatherServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/weatherServiceImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tec/bd/weather/weatherServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -33,8 +28,6 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tec/bd/weather/weatherServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tec/bd/weather/weatherServiceImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/weather-app-1.0.0.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +89,26 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tec.bd.weather" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tec.bd.weather.App" />
+      <module name="weather-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tec.bd.weather.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

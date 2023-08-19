@@ -1,10 +1,11 @@
 package tec.bd.weather.entity;
 
-public class Weather {
+public class Forecast {
 
     private Integer id;
     private float temperature;
     private String cityName;
+
     private String zipCode;
 
     private String countryName;
@@ -49,19 +50,44 @@ public class Weather {
         this.countryName = countryName;
     }
 
-    public static void validate(Weather newWeather){
-        if(newWeather == null){
+    @Override
+    public String toString() {
+        return "Forecast{" +
+                "id=" + id +
+                ", temperature=" + temperature +
+                ", cityName='" + cityName + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", countryName='" + countryName + '\'' +
+                '}';
+    }
+
+    public static void validate(Forecast newForecast){
+        if(newForecast == null){
             throw new RuntimeException("No weather forecast provided");
         }
-        if(newWeather.getId() == null){
+        if(newForecast.getId() == null){
             throw new RuntimeException("No weather forecast ID provided");
         }
-        if(newWeather.getId() > 0){
+        if(newForecast.getId() < 1){
             throw new RuntimeException("Weather forecast ID invalid");
+        }
+        if(newForecast.getCountryName().isBlank()){
+            throw new RuntimeException("Weather forecast country is invalid");
+        }
+        if(newForecast.getCityName().isBlank()){
+            throw new RuntimeException("Weather forecast city is invalid");
+        }
+        if(newForecast.getZipCode().isBlank()){
+            throw new RuntimeException("Weather forecast zip is invalid");
+        }
+        if(newForecast.getTemperature() < 0){
+            throw new RuntimeException("Weather forecast temperature is invalid");
         }
     }
 
-    public Weather(Integer id, String countryName, String cityName, String zipCode, float temperature){
+    public Forecast(){}
+
+    public Forecast(Integer id, String countryName, String cityName, String zipCode, float temperature){
         this.id = id;
         this.countryName = countryName;
         this.cityName = cityName;

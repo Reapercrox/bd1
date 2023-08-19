@@ -5,8 +5,10 @@ import picocli.CommandLine;
 @CommandLine.Command(
     name = "Weather App",
     subcommands = {
-            WeatherByCityCommand.class,
-            WeatherByZipCodeCommand.class,
+            ForecastByCityCommand.class,
+            ForecastByZipCodeCommand.class,
+            CreateForecastCommand.class,
+            UpdtateForecastCommand.class,
             CommandLine.HelpCommand.class
         },
         description = "Weather App Service by city and zip code"
