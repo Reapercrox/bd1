@@ -4,9 +4,8 @@ import picocli.CommandLine;
 import tec.bd.weather.ApplicationContext;
 import tec.bd.weather.entity.Forecast;
 
-@CommandLine.Command(name = "update-forecast", aliases = {"uf"}, description = "Update existing forecast data")
-public class UpdtateForecastCommand implements Runnable{
-
+@CommandLine.Command(name = "delete-forecast", aliases = {"df"}, description = "Delete existing forecast data")
+public class DeleteForecastCommand implements Runnable {
     @CommandLine.Parameters(paramLabel = "<forecast id>", description = "The new forecast id")
     private int newForecastId;
 
@@ -22,15 +21,15 @@ public class UpdtateForecastCommand implements Runnable{
     @CommandLine.Parameters(paramLabel = "<temperature>", description = "The temperature")
     private float temperature;
 
-    public void run(){
-        try{
+    public void run() {
+        try {
             var appContext = new ApplicationContext();
             var weatherService = appContext.getWeatherService();
-            var newForecast = new Forecast(newForecastId,countryName,cityName,zipCode,temperature);
-            var updatedForecast = weatherService.updateForecast(newForecast);
-            System.out.println(updatedForecast);
-        } catch (Exception e){
-            System.err.println("Can't update forecast. " + e.getMessage());
+            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, temperature);
+            weatherService.removeForecast(newForecastId);
+            System.out.println(newForecast + " deleted");
+        } catch (Exception e) {
+            System.err.println("Can't delete forecast. " + e.getMessage());
         }
     }
 }

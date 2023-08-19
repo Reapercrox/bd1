@@ -13,7 +13,7 @@ public interface WeatherService {
 
      Forecast updateForecast(Forecast forecast);
 
-     void removeForecast(Integer forecastId);
+     void removeForecast(Integer forecast);
 
 
 }

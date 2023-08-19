@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>tec.bd</groupId>
-  <artifactId>forecast-app</artifactId>
+  <artifactId>weather-app</artifactId>
   <version>1.0.1</version>
 
-  <name>forecast-app</name>
+  <name>weather-app</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -52,12 +52,6 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>7.7.0</version>
-      <scope>test</scope>
-    </dependency>
 
   </dependencies>
 

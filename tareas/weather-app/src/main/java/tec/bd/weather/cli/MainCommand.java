@@ -9,6 +9,7 @@ import picocli.CommandLine;
             ForecastByZipCodeCommand.class,
             CreateForecastCommand.class,
             UpdtateForecastCommand.class,
+            DeleteForecastCommand.class,
             CommandLine.HelpCommand.class
         },
         description = "Weather App Service by city and zip code"

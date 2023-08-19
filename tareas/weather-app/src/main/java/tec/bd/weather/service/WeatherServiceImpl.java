@@ -63,13 +63,13 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
-    public void removeForecast(Integer forecastId) {
-        var current = this.weatherRepository.findByID(forecastId);
+    public void removeForecast(Integer forecastID) {
+        var current = this.weatherRepository.findByID(forecastID);
         if(current.isEmpty()){
             throw new RuntimeException("No forecast ID found");
         }
         else{
-            this.weatherRepository.delete(forecastId);
+            this.weatherRepository.delete(forecastID);
         }
 
     }
