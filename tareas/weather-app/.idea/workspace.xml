@@ -8,13 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="524f4ff7-d447-4d78-a522-027373747cb5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/CreateForecastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/CreateForecastCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/DeleteForecastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/DeleteForecastCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/UpdtateForecastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/UpdtateForecastCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Forecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryForecastRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryForecastRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/memis/Documents/TEC/BD1/tareas/weather-app/src/main/java/tec/bd/weather/service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -109,7 +111,8 @@
       <workItem from="1692147974895" duration="216000" />
       <workItem from="1692151287806" duration="1073000" />
       <workItem from="1692213927068" duration="9023000" />
-      <workItem from="1692464924082" duration="2981000" />
+      <workItem from="1692464924082" duration="3707000" />
+      <workItem from="1692917593600" duration="23928000" />
     </task>
     <servers />
   </component>

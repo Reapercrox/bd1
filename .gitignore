@@ -7,4 +7,18 @@
 /dataSources/
 /dataSources.local.xml
 
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.idea/
+atlassian-ide-plugin.xml
+
+# Java
+*.class
+*.ear
+*.jar
+*.war
+
+# Maven
 target/

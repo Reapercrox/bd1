@@ -1,5 +1,7 @@
 package tec.bd.weather.entity;
 
+import java.util.Date;
+
 public class Forecast {
 
     private Integer id;
@@ -9,6 +11,16 @@ public class Forecast {
     private String zipCode;
 
     private String countryName;
+
+    private Date forecastDate;
+
+    public Date getForecastDate() {
+        return forecastDate;
+    }
+
+    public void setForecastDate(Date forecastDate) {
+        this.forecastDate = forecastDate;
+    }
 
     public String getZipCode() {
         return zipCode;
@@ -55,6 +67,7 @@ public class Forecast {
         return "Forecast{" +
                 "id=" + id +
                 ", temperature=" + temperature +
+                ", date=" + forecastDate +
                 ", cityName='" + cityName + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", countryName='" + countryName + '\'' +
@@ -87,11 +100,12 @@ public class Forecast {
 
     public Forecast(){}
 
-    public Forecast(Integer id, String countryName, String cityName, String zipCode, float temperature){
+    public Forecast(Integer id, String countryName, String cityName, String zipCode, Date forecastDate, float temperature){
         this.id = id;
         this.countryName = countryName;
         this.cityName = cityName;
         this.zipCode = zipCode;
+        this.forecastDate = forecastDate;
         this.temperature = temperature;
     }
 }

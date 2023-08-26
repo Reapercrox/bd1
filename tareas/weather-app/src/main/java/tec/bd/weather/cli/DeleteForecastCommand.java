@@ -4,6 +4,8 @@ import picocli.CommandLine;
 import tec.bd.weather.ApplicationContext;
 import tec.bd.weather.entity.Forecast;
 
+import java.util.Date;
+
 @CommandLine.Command(name = "delete-forecast", aliases = {"df"}, description = "Delete existing forecast data")
 public class DeleteForecastCommand implements Runnable {
     @CommandLine.Parameters(paramLabel = "<forecast id>", description = "The new forecast id")
@@ -18,6 +20,9 @@ public class DeleteForecastCommand implements Runnable {
     @CommandLine.Parameters(paramLabel = "<zip code>", description = "The zip code")
     private String zipCode;
 
+    @CommandLine.Parameters(paramLabel = "<forecast date>", description = "The Forecast date")
+    private Date forecastDate;
+
     @CommandLine.Parameters(paramLabel = "<temperature>", description = "The temperature")
     private float temperature;
 
@@ -25,7 +30,7 @@ public class DeleteForecastCommand implements Runnable {
         try {
             var appContext = new ApplicationContext();
             var weatherService = appContext.getWeatherService();
-            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, temperature);
+            var newForecast = new Forecast(newForecastId, countryName, cityName, zipCode, forecastDate, temperature);
             weatherService.removeForecast(newForecastId);
             System.out.println(newForecast + " deleted");
         } catch (Exception e) {
