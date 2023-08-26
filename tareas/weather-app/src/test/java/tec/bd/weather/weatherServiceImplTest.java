@@ -101,7 +101,7 @@ public class weatherServiceImplTest {
 
         var forecastRepository = mock(InMemoryForecastRepository.class);
 
-        given(forecastRepository.findByID(anyInt())).willReturn(null);
+        given(forecastRepository.findByID(anyInt())).willReturn(Optional.of(new Forecast()));
 
         var weatherService = new WeatherServiceImpl(forecastRepository);
         var forecast = new Forecast(6,"Costa Rica","Limon","33122", new Date(), 23.0f);
@@ -113,7 +113,7 @@ public class weatherServiceImplTest {
 
         }
 
-        verify(forecastRepository, times(1)).findByID(6);
+        verify(forecastRepository, times(1)).findByID(anyInt());
         verify(forecastRepository, never()).save(forecast);
 
     }
@@ -169,7 +169,7 @@ public class weatherServiceImplTest {
 
     }
 
-    @Test
+    @Test // Este test es igual al anterior
     public void GivenAnInvalidForecast_WhenUpdatingForecast_ThenServiceException(){
 
         var invalidForecast = new Forecast(7,"Panama","Bocas del Toro","50040", new Date(), 25.0f);
@@ -195,41 +195,42 @@ public class weatherServiceImplTest {
     @Test
     public void GivenAValidForecast_WhenDeletingForecast_ThenDeletesForecast(){
 
-//        var forecastToDelete = new Forecast(4, "Costa Rica", "Limon", "40401", new Date(), 25.0f);
-//
-//        var forecastRepository = mock(InMemoryForecastRepository.class);
-//
-//        var weatherService = new WeatherServiceImpl(forecastRepository);
-//
+        var forecastToDelete = new Forecast(4, "Costa Rica", "Limon", "40401", new Date(), 25.0f);
+
+        var forecastRepository = mock(InMemoryForecastRepository.class);
+
+        given(forecastRepository.findByID(anyInt())).willReturn(Optional.of(new Forecast()));
+
+        var weatherService = new WeatherServiceImpl(forecastRepository);
+
 //        doNothing().when(forecastRepository).delete(anyInt());
-//
 //        doCallRealMethod().when(weatherService).removeForecast(anyInt());
-//
-//        verify(forecastRepository, times(1)).delete(forecastToDelete.getId());
-//        verify(weatherService, times(1)).removeForecast(forecastToDelete.getId());
+
+        weatherService.removeForecast(4);
+
+        verify(forecastRepository, times(1)).delete(4); //delete(forecastToDelete.getId())
+        verify(forecastRepository, times(1)).findByID(4);
 
     }
 
     @Test
-    public void GivenAnInvalidForecast_WhenDeletingForecast_ThenThrowsException(){
-//        var forecastToDelete = new Forecast(7, "Costa Rica", "Limon", "40401", new Date(), 25.0f);
-//
-//        var forecastRepository = mock(InMemoryForecastRepository.class);
-//
-//        var weatherService = new WeatherServiceImpl(forecastRepository);
-//
-//        doThrow(new RuntimeException()).when(forecastRepository).delete(anyInt());
-//
-//        doThrow(new RuntimeException()).when(weatherService).removeForecast(anyInt());
-//
-//        try {
-//            weatherService.removeForecast(forecastToDelete.getId());
-//            fail("We shouldn't reach this line!, invalid forecast");
-//        } catch (Exception e){
-//
-//        }
-//
-//        verify(forecastRepository, times(1)).delete(forecastToDelete.getId());
-//        verify(weatherService, times(1)).removeForecast(forecastToDelete.getId());
+    public void GivenAnInvalidForecast_WhenDeletingForecast_ThenServiceException(){
+        // var forecastToDelete = new Forecast(7, "Costa Rica", "Limon", "40401", new Date(), 25.0f);
+
+        var forecastRepository = mock(InMemoryForecastRepository.class);
+
+        given(forecastRepository.findByID(anyInt())).willReturn(Optional.empty());
+
+        var weatherService = new WeatherServiceImpl(forecastRepository);
+
+        try {
+            weatherService.removeForecast(7);
+            fail("We shouldn't reach this line!, invalid forecast");
+        } catch (Exception e){
+
+        }
+
+        verify(forecastRepository, times(1)).findByID(7);
+        verify(forecastRepository, never()).delete(anyInt());
     }
 }
