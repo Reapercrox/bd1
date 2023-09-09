@@ -1,6 +1,7 @@
-package tec.bd.weather.repository;
+package tec.bd.weather.repository.memory;
 
 import tec.bd.weather.entity.Forecast;
+import tec.bd.weather.repository.Repository;
 
 import java.util.*;
 
@@ -28,9 +29,16 @@ public class InMemoryForecastRepository implements Repository<Forecast, Integer>
         return new ArrayList<>(this.inMemoryForecastData);
     }
 
+    public int getCurrentMaxId(){
+        return this.inMemoryForecastData.stream().max(Comparator.comparing(Forecast::getId))
+                .map(Forecast::getId)
+                .orElse(0);
+    }
     @Override
-    public void save(Forecast forecast) {
+    public Forecast save(Forecast forecast) {
+        forecast.setId(this.getCurrentMaxId()+1);
         this.inMemoryForecastData.add(forecast);
+        return forecast;
     }
 
     @Override

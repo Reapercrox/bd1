@@ -3,18 +3,15 @@ package tec.bd.weather.service;
 import tec.bd.weather.entity.Forecast;
 import tec.bd.weather.repository.Repository;
 
-public class WeatherServiceImpl implements WeatherService {
+import java.util.List;
 
-    //private Map<String,Float> cityTemperatureData;
-    //private Map<String,Float> zipCodeTemperatureData;
+public class WeatherServiceImpl implements WeatherService {
 
     private final Repository<Forecast,Integer> weatherRepository;
 
     public WeatherServiceImpl(Repository<Forecast,Integer> weatherRepository){
         this.weatherRepository = weatherRepository;
     }
-
-
 
     public float getCityTemperature(String city) {
         var weather = this.weatherRepository
@@ -38,10 +35,9 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
-    public void newForecast(Forecast newForecast) {
+    public Forecast newForecast(Forecast newForecast) {
 
         Forecast.validate(newForecast);
-        //Otras validaciones
 
         var current = this.weatherRepository.findByID(newForecast.getId());
 
@@ -49,12 +45,15 @@ public class WeatherServiceImpl implements WeatherService {
             throw new RuntimeException("Weather forecast ID already exist in database");
         }
 
-        this.weatherRepository.save(newForecast);
+        return this.weatherRepository.save(newForecast);
     }
 
     @Override
     public Forecast updateForecast(Forecast forecast) {
         Forecast.validate(forecast);
+        if (forecast.getId() < 1) {
+            throw new RuntimeException("Invalid forecast Id " + forecast.getId());
+        }
         var current = this.weatherRepository.findByID(forecast.getId());
         if (current.isEmpty()){
             throw new RuntimeException("Weather forecast ID doesn't exist in database");
@@ -72,5 +71,9 @@ public class WeatherServiceImpl implements WeatherService {
             this.weatherRepository.delete(forecastID);
         }
 
+    }
+
+    public List<Forecast> getAllForecasts(){
+            return this.weatherRepository.findAll();
     }
 }

@@ -2,6 +2,8 @@ package tec.bd.weather.service;
 
 import tec.bd.weather.entity.Forecast;
 
+import java.util.List;
+
 public interface WeatherService {
 
 
@@ -9,11 +11,13 @@ public interface WeatherService {
 
      float getZipCodeTemperature(String zipCode);
 
-     void newForecast(Forecast forecast);
+     Forecast newForecast(Forecast forecast);
 
      Forecast updateForecast(Forecast forecast);
 
      void removeForecast(Integer forecast);
+
+     List<Forecast> getAllForecasts();
 
 
 }

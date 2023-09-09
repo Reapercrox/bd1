@@ -1,5 +1,6 @@
 package tec.bd.weather.entity;
 
+import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Forecast {
@@ -81,9 +82,6 @@ public class Forecast {
         if(newForecast.getId() == null){
             throw new RuntimeException("No weather forecast ID provided");
         }
-        if(newForecast.getId() < 1){
-            throw new RuntimeException("Weather forecast ID invalid");
-        }
         if(newForecast.getCountryName().isBlank()){
             throw new RuntimeException("Weather forecast country is invalid");
         }
@@ -99,6 +97,10 @@ public class Forecast {
     }
 
     public Forecast(){}
+
+    public Forecast(String countryName, String cityName, String zipCode, Date forecastDate, float temperature){
+        this(0, countryName, cityName, zipCode, forecastDate, temperature);
+    }
 
     public Forecast(Integer id, String countryName, String cityName, String zipCode, Date forecastDate, float temperature){
         this.id = id;

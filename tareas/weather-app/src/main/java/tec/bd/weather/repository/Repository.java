@@ -16,7 +16,7 @@ public interface Repository <T, ID> {
 
     List<Forecast> findAll();
 
-    void save(T t);
+    T save(Forecast forecast);
 
     void delete(ID id);
 
