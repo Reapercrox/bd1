@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="524f4ff7-d447-4d78-a522-027373747cb5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/Queries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <workItem from="1692464924082" duration="3707000" />
       <workItem from="1692917593600" duration="27926000" />
       <workItem from="1693644384810" duration="6701000" />
-      <workItem from="1694055935108" duration="34163000" />
+      <workItem from="1694055935108" duration="34487000" />
     </task>
     <servers />
   </component>
@@ -137,6 +136,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/ForecastRepository.java</url>
           <line>66</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/RemoveForecastCommand.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
