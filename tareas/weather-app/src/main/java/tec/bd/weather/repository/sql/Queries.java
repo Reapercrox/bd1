@@ -7,14 +7,14 @@ public class Queries {
             "FROM forecast";
 
     public static final String INSERT_NEW_FORECAST = "INSERT INTO " +
-            "country_name, city_name, zip_code, forecast_date, temperature " +
+            "forecast(country_name, city_name, zip_code, forecast_date, temperature) " +
             "VALUES(?,?,?,?,?)";
 
     public static final String DELETE_FORECAST_BY_ID = "DELETE " +
             "FROM forecast " +
             "WHERE forecast_id = ?";
 
-    public static final String FIND_FORECAST_BY_ID = "SELECT " +
+    public static final String FIND_FORECAST_BY_ID = "SELECT * " +
             "FROM forecast " +
             "WHERE forecast_id = ?";
 

@@ -8,20 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="524f4ff7-d447-4d78-a522-027373747cb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/RemoveForecastCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/CreateForecastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/CreateForecastCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/DeleteForecastCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/cli/MainCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Forecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/entity/Forecast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/InMemoryForecastRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/memory/InMemoryForecastRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/service/WeatherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tec/bd/weather/weatherServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/Queries.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +118,7 @@
       <workItem from="1692464924082" duration="3707000" />
       <workItem from="1692917593600" duration="27926000" />
       <workItem from="1693644384810" duration="6701000" />
-      <workItem from="1694055935108" duration="27152000" />
+      <workItem from="1694055935108" duration="34163000" />
     </task>
     <servers />
   </component>
@@ -140,22 +128,22 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/tec/bd/weather/ApplicationContext.java</url>
-          <line>27</line>
-          <properties class="tec.bd.weather.ApplicationContext" method="initSqliteDataSource">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/ForecastRepository.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tec/bd/weather/repository/sql/ForecastRepository.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="this.sqliteDataSource" language="JAVA" />
-        <watch expression="sqliteDS.url" />
-        <watch expression="this.exhaustedResults" language="JAVA" />
+        <watch expression="rs" />
+        <watch expression="rs" />
       </configuration>
     </watches-manager>
   </component>
